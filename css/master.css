@@ -1,0 +1,418 @@
+
+    :root {
+        --primary-color: #283618;
+        --secondary-color: #606c38;
+        --accent-color: #82c69c;
+        --light-color: #fefae0;
+        --dark-color: #333;
+    }
+
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--light-color);
+        color: var(--dark-color);
+        scroll-behavior: smooth;
+    }
+    
+    /* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #284d2e, #1f562f, #45844e);
+    color: white;
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.hero-image {
+    width: 180px;
+    height: 160px;
+   
+    object-fit: cover; /* Keeps aspect ratio, crops if needed */
+    opacity: 0; /* Start hidden */
+    transform: translateY(-30px); /* Start slightly above */
+    animation: slideIn 1s ease-out forwards;
+    animation-delay: 0.3s; /* Delay for smoother entry */
+}
+
+/* Keyframes for sliding animation */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero-image:hover {
+    box-shadow: 0 0 20px var(--accent-color);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.highlight {
+    color: #dce3db; /* red highlight */
+}
+
+.highlight-alt {
+    color: #d1ec71; /* yellow highlight */
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background: #709454;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #ccdac3;
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 2px solid #82b179;
+    color: white;
+}
+
+.btn.secondary:hover {
+    background: #ccdac3;
+    color: white;
+}
+
+/* Hero Image */
+.hero-image {
+    position: relative;
+    border-radius: 20px;
+    padding: 6px;
+    background: linear-gradient(135deg, #4ba065, #96c299);
+    max-width: 320px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-text {
+        margin-top: 30px;
+    }
+}
+
+    
+   /* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #2f572b, #178e3a, #b9e465);
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+}
+.logo .highlight {
+    color: #5b814a;
+}
+
+/* Center Nav Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    flex: 1;
+    justify-content: center; /* this puts links in center */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-links li a:hover {
+    color: #346938;
+}
+
+/* Hire Me Button (Right) */
+.btn.hire-me {
+    background: #2d5b1f;
+    color: rgb(38, 105, 38);
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+.btn.hire-me:hover {
+    background: #cad7c5;
+}
+ 
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+}
+
+.logo .highlight {
+    color: #95e533; /* red accent */
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff004c;
+}
+
+/* Hire Me button */
+.btn.hire-me {
+    background: #286d28;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn.hire-me:hover {
+    background: #b4c8b2;
+}
+
+/* Responsive Navbar */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none; /* you can later add a hamburger menu */
+    }
+}
+
+    
+    .container {
+        width: 80%;
+        margin: 40px auto;
+    }
+    
+    .section {
+        margin-bottom: 80px;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .section:hover {
+        transform: translateY(-5px);
+    }
+    
+    h2 {
+        color: var(--primary-color);
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--accent-color);
+        position: relative;
+    }
+    
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background-color: var(--secondary-color);
+    }
+    
+    .skills, .certificates {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+    }
+    
+    .skills div, .certificates div {
+        background-color: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border-left: 4px solid var(--secondary-color);
+    }
+    
+    .skills div:hover, .certificates div:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border-left: 4px solid var(--accent-color);
+    }
+    
+    footer {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+    }
+    
+    /* Animation classes */
+    .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .animate-on-scroll.animated {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* Progress bars for skills */
+    .skill-bar {
+        height: 8px;
+        background-color: #e9ecef;
+        border-radius: 4px;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+    
+    .skill-progress {
+        height: 100%;
+        border-radius: 4px;
+        background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+        width: 0;
+        transition: width 1s ease-in-out;
+    }
+    /* Projects Section Styles */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(96, 205, 109, 0.1);
+}
+
+.project-image-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #499159, #283618);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.project-image-placeholder i {
+    transition: transform 0.3s ease;
+
+}
+.project-image-placeholder i img{
+    width: 22rem;
+    
+}
+.project-card:hover .project-image-placeholder i {
+    transform: scale(1.2);
+}
+
+.technologies {
+    margin: 15px 0;
+}
+
+.technologies .badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.card-footer {
+    background: transparent;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .container {
+            width: 95%;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+        }
+        
+        nav {
+            flex-direction: column;
+        }
+    }
